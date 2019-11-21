@@ -3,12 +3,11 @@ const router = express.Router();
 
 router.route('/')
     .get((req, res, next) => {
-        res.end('When a GET request is made, then this '
-            + 'is the response sent to the client!');
+        res.json({teste: "Testando"})
     })
     .post((req, res, next) => {
-        res.end('When a POST request is made, then this '
-            + 'is the response sent to the client!');
+        //var description = req.body.description;
+        console.log(req.body('description'))
     })
     .put((req, res, next) => {
         res.end('When a PUT request is made, then this '
